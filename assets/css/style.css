@@ -1712,6 +1712,10 @@ ul.arrow {
 	font-size: 12px;
 }
 
+.wishlist-btn.added{
+  color: red;
+}
+
 .wishlist-popup{
     position: fixed;
     bottom: 30px;

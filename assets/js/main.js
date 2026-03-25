@@ -1,6 +1,7 @@
 $(document).ready(function () {
     LoadData("menu", function (data) {
         PrintHeader(data);
+        MobileMenu();
         PrintFooter();
     });
 
@@ -11,6 +12,7 @@ $(document).ready(function () {
                     return x.id == FindById();
                 }),
             );
+            WatchlistButtons();
 
             $(document).on("click", ".wishlist-btn", function (e) {
                 e.preventDefault();
@@ -35,36 +37,27 @@ $(document).ready(function () {
                     $("#filter-sort").val(),
                 ),
             );
-
-            $(document).on("change", "#filter-category", function () {
-                PrintContent(DataSplit(FilterMovies(data), FindById(), 8, data));
-            });
-
-            $(document).on("change", "#filter-year", function () {
-                PrintContent(DataSplit(FilterMovies(data), FindById(), 8, data));
-            });
-
-            $(document).on("change", "#filter-sort", function () {
-                PrintContent(
-                    SortContent(
-                        DataSplit(FilterMovies(data), FindById(), 8, data),
-                        $("#filter-sort").val(),
-                    ),
-                );
+            WatchlistButtons();
+           
+            $(document).on("change","#filter-category, #filter-year, #filter-duration, #filter-sort", function(){
+                PrintContent(SortContent(DataSplit(FilterMovies(data), FindById(), 8, data),$("#filter-sort").val()));
+                WatchlistButtons();
             });
 
             $(document).on("click", "#next-page", function (e) {
                 e.preventDefault();
                 PrintContent(
-                    DataSplit(FilterMovies(data), parseInt(FindById()) + 1, 8, data),
+                    SortContent(DataSplit(FilterMovies(data), parseInt(FindById()) + 1, 8, data),$("#filter-sort").val())
                 );
+                WatchlistButtons();
             });
 
             $(document).on("click", "#prev-page", function (e) {
                 e.preventDefault();
                 PrintContent(
-                    DataSplit(FilterMovies(data), parseInt(FindById()) - 1, 8, data),
+                    SortContent(DataSplit(FilterMovies(data), parseInt(FindById()) - 1, 8, data),$("#filter-sort").val())
                 );
+                WatchlistButtons();
             });
 
             $(document).on("click", ".wishlist-btn", function (e) {
@@ -147,6 +140,11 @@ function PrintContent(data) {
     let container = $("#movie-review");
     container.empty();
 
+    if(!data.length){
+        container.html(`<div><p>No movies found</p></div>`);
+    }
+
+    else{
     data.forEach(function (movie) {
         let card = `
         <div class="movie">
@@ -156,9 +154,8 @@ function PrintContent(data) {
             </a>
 			<strong>Rating:</strong> 
 			<div class="star-rating"><span style="width:${movie.rating * 20}%"></span></div>
-            </br>
-            </br>
-            <p>${movie.description.short}</p>
+            <div><strong>Duration:</strong> ${MovieDurationHoursMinutes(movie.duration)}</div></br>
+            <p>${DescriptionShortener(movie.description,250)}<a href="movie.html?id=${movie.id}">Read More</a></p>
             <button value="${movie.id}" class="wishlist-btn">
 		    <i class="fa fa-heart"></i> Add to Wishlist
 	        </button>
@@ -166,12 +163,39 @@ function PrintContent(data) {
         `;
         container.append(card);
     });
+    }
+}
+
+function DescriptionShortener(data, textLength){
+    if (data.length <= textLength) return data;
+
+    let shortenText = data.substring(0, textLength);
+    return shortenText.substring(0, shortenText.lastIndexOf(" ")) + "...";
+}
+
+function MovieDurationHoursMinutes(data){
+    let hours = Math.floor(data / 60);
+    let minutes = data % 60;
+    return `${hours}h ${minutes}m`
 }
 
 function FilterMovies(data) {
     let filteredContent = FilterMoviesCategory(data, $("#filter-category").val());
 
     filteredContent = FilterMoviesYear(filteredContent, $("#filter-year").val());
+
+    filteredContent = FilterMovieDuration(filteredContent, $("#filter-duration").val());
+
+    $("#pagination").toggle(filteredContent.length >= 8);
+    
+    PrintMovieGenres(filteredContent,$("#filter-category").val());
+
+    PrintMovieYear(filteredContent, $("#filter-year").val())
+
+    if(!filteredContent.length){
+        PrintMovieGenres(data);
+        PrintMovieYear(data)
+    }
 
     return filteredContent;
 }
@@ -198,6 +222,22 @@ function FilterMoviesYear(data, yearValue) {
     }
 }
 
+function FilterMovieDuration(data, durationValue){
+    if(durationValue == 0){
+        return data;
+    } 
+    else{
+        return data.filter(x => {
+            switch(durationValue){
+                case "1": return x.duration < 90;
+                case "2": return x.duration >= 90 && x.duration <= 150;
+                case "3": return x.duration > 150;
+                default: return true;
+            }
+        })
+    }
+}
+
 function SortContent(data, sortValue) {
     if (sortValue == "asc") {
         return data.sort((a, b) => a.title.localeCompare(b.title));
@@ -217,34 +257,43 @@ function MovieRating(data) {
     }
     return starRating;
 }
+function MobileMenu() {
+    $(".mobile-navigation").html($(".main-navigation .menu").clone());
 
+    $(document).on("click", ".menu-toggle", function () {
+        $(".mobile-navigation").slideToggle();
+    });
+}
 function PrintHeader(data) {
     let container = ``;
+
     container += `<div class="container">
-                        <a href="index.html" id="branding">
-                                <img src="img/logo.png" alt="Movie Review" class="logo">
-                                <div class="logo-copy">
-                                    <h1 class="site-title">Filmotip</h1>
-                                    <small class="site-description">Movie reviews</small>
-                                </div>
-                            </a>
-                            <div class="main-navigation">
-                                <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
-                                <ul class="menu">`;
+                    <a href="index.html" id="branding">
+                    <img src="img/logo.png" alt="Movie Review" class="logo">
+                    <div class="logo-copy">
+                    <h1 class="site-title">Filmotip</h1>
+                    <small class="site-description">Movie reviews</small>
+                    </div>
+                    </a>
+                    <div class="main-navigation">
+                    <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+                    <ul class="menu">`;
 
     data.forEach(function (x) {
         container += `<li class="menu-item"><a href="${x.path}">${x.name}</a></li>`;
     });
 
     container += `</ul>
-                </div>
-                <div class="mobile-navigation"></div></div>`;
+                    </div>
+                    <div class="mobile-navigation"></div>
+                    </div>`;
 
     $("header").prepend(container);
 }
 
 function PrintFooter() {
     let container = ``;
+
     container += `<div class="container">
 					<div class="row">
 						<div class="col-md-3">
@@ -286,8 +335,9 @@ function PrintFooter() {
     $("footer").prepend(container);
 }
 
-function PrintMovieGenres(data) {
-    let container = ``;
+function PrintMovieGenres(data,value = "0") {
+    $("#filter-category").empty();
+    $("#filter-category").append(`<option value="0">All Genres</option>`);
 
     let distinctGenres = [];
     data.forEach(function (x) {
@@ -298,15 +348,16 @@ function PrintMovieGenres(data) {
 
     for (let i = 0; i < distinctGenres.length; i++) {
         if (distinctGenres[i]) {
-            container += `<option value="${i}">${distinctGenres[i]}</option>`;
+            $("#filter-category").append(`<option value="${i}">${distinctGenres[i]}</option>`);
         }
     }
+    $("#filter-category").val(value);
 
-    $("#filter-category").append(container);
 }
 
-function PrintMovieYear(data) {
-    let container = ``;
+function PrintMovieYear(data, value = "0") {
+    $("#filter-year").empty();
+    $("#filter-year").append(`<option value="0">All Years</option>`);
 
     let distinctYears = [];
     data.forEach(function (x) {
@@ -317,11 +368,12 @@ function PrintMovieYear(data) {
     distinctYears.sort((a, b) => a - b);
 
     distinctYears.forEach(function (x) {
-        container += `<option value="${x}">${x}</option>`;
+        $("#filter-year").append(`<option value="${x}">${x}</option>`);
     });
 
-    $("#filter-year").append(container);
+    $("#filter-year").val(value);
 }
+
 
 function FindById() {
     let urlpath = new URLSearchParams(window.location.search);
@@ -356,16 +408,24 @@ function DataSplit(data, id, numberOfMoviesOnPage, dataMax) {
     if (data.length < numberOfMoviesOnPage) {
         return data;
     }
+    
+    let movies = [];
 
-    return data.filter(function (x) {
-        if (id == 1) {
-            return x.id <= id * numberOfMoviesOnPage;
+    for(let i = 0; i < data.length; i++){
+        let x = data[i];
+        if(id == 1){
+           if (i < id * numberOfMoviesOnPage) {
+            movies.push(x);
+        } 
         }
-        return (
-            x.id > id * numberOfMoviesOnPage - numberOfMoviesOnPage &&
-            x.id <= id * numberOfMoviesOnPage
-        );
-    });
+        else{
+            if(i >= id * numberOfMoviesOnPage - numberOfMoviesOnPage && i < id * numberOfMoviesOnPage){
+                movies.push(x);
+            }
+        }
+    }
+
+    return movies;
 }
 
 function PrintMovie(data) {
@@ -387,13 +447,13 @@ function PrintMovie(data) {
 									<h2 class="movie-title">${data.title}
                                     </h2>
 									<div class="movie-summary">
-										<p>${data.description.long}</p>
+										<p>${data.description}</p>
 									</div>
 									<ul class="movie-meta">
 										<li><strong>Rating:</strong> 
 											<div class="star-rating"><span style="width:${data.rating * 20}%"></span></div>
 										</li>
-										<li><strong>Length:</strong> ${data.duration.toString()} min</li>
+										<li><strong>Length:</strong> ${MovieDurationHoursMinutes(data.duration)}</li>
 										<li><strong>Premiere:</strong> ${data.premiere}</li>
 										<li><strong>Category:</strong> ${data.category.map((x) => x.name).join(", ")}</li>
 									</ul>
@@ -404,7 +464,7 @@ function PrintMovie(data) {
 										<li><strong>Stars:</strong> ${data.crew.actors.map((x) => x).join(", ")}</li>
 									</ul>
                                     <button value="${data.id}" class="wishlist-btn">
-		                            <i class="fa fa-heart"></i> Add to Wishlist
+		                            <i class="fa fa-heart"></i> Add to Watchlist
 	                                </button>
 								</div>
                                 
@@ -416,53 +476,80 @@ function PrintMovie(data) {
 }
 
 function PrintMainMoviePage(data) {
-    let randomNumber = Math.floor(Math.random() * (data.length - 8));
+    
+    let shuffledMovies = data.sort(() => Math.random() - 0.5);
+
+    shuffledMovies = shuffledMovies.slice(0,8)
+
     let container = ``;
+
     container += `<div class="container">
 					<div class="page">
 					<div class="row">
 					<div class="col-md-9">
-                    <a href="movie.html?id=${data[randomNumber].id}"><img src="${data[randomNumber].image}" alt="${data[randomNumber].title}"></a>`;
-    randomNumber += 1;
+                    <a href="movie.html?id=${shuffledMovies[0].id}">
+                    <img src="${shuffledMovies[0].image}" alt="${shuffledMovies[0].title}">
+                    </a>`;
+
     container += `</div>
 				    <div class="col-md-3">
 					<div class="row">`;
-    data.slice(randomNumber, randomNumber + 3).forEach(function (x) {
-        container += `<div class="col-sm-6 col-md-12">
-						<div class="latest-movie">
-						<a href="movie.html?id=${x.id}"><img src="${x.image}" alt="${x.title}"></a>
-						</div>
-						</div>`;
-    });
-    container += `</div></div></div><div class="row">`;
-    randomNumber += 3;
-    data.slice(randomNumber, randomNumber + 4).forEach(function (x) {
-        container += `<div class="col-sm-6 col-md-3">
-                        <div class="latest-movie">
-                        <a href="movie.html?id=${x.id}"><img src="${x.image}" alt="${x.title}"></a>
-                        </div>
-                        </div>`;
-    });
+
+    for (let i = 1; i <= 3; i++){
+    container += `<div class="col-sm-6 col-md-12">
+					<div class="latest-movie">
+					<a href="movie.html?id=${shuffledMovies[i].id}">
+                    <img src="${shuffledMovies[i].image}" alt="${shuffledMovies[i].title}">
+                    </a>
+					</div>
+					</div>`;
+    
+    }
+
+    container += `</div></div></div>
+                    <div class="row">`;
+    
+    for (let i = 4; i <= 7; i++){
+    container += `<div class="col-sm-6 col-md-3">
+                    <div class="latest-movie">
+                    <a href="movie.html?id=${shuffledMovies[i].id}">
+                    <img src="${shuffledMovies[i].image}" alt="${shuffledMovies[i].title}">
+                    </a>
+                    </div>
+                    </div>`;
+    }
+
     container += `</div></div></div>`;
+
     $("#main-page").append(container);
 }
 
 function SendDataToLocalStorage(data) {
-    let localStorageData = JSON.parse(localStorage.getItem("movies")) || [];
+    let localStorageData = GetDataFromLocalStorage();
+
+
+    let button = $(`.wishlist-btn[value='${data.id}']`);
+
     if (CheckLocalStorage(localStorageData, data)) {
         ShowWatchlistPopUp(data, "wishlist-popup", " movie is in watchlist");
-    } else {
+        button.addClass("added");
+        button.html(`<i class="fa fa-heart"></i> Added to Watchlist`);
+    } 
+    else {
         localStorageData.push({ id: data.id });
         ShowWatchlistPopUp(data, "wishlist-popup", " added to watchlist");
+        button.addClass("added");
+        button.html(`<i class="fa fa-heart"></i> Added to Watchlist`);
     }
 
     localStorage.setItem("movies", JSON.stringify(localStorageData));
 }
 
+
 function GetDataFromLocalStorage() {
     let data = JSON.parse(localStorage.getItem("movies"));
 
-    return data;
+    return data || [];
 }
 
 function CheckLocalStorage(localStorageData, data) {
@@ -470,17 +557,34 @@ function CheckLocalStorage(localStorageData, data) {
 }
 
 function RemoveLocalStorageData(movieId) {
-    let data = JSON.parse(localStorage.getItem("movies")) || [];
+    let data = GetDataFromLocalStorage();
 
     data = data.filter((x) => x.id != movieId);
 
     localStorage.setItem("movies", JSON.stringify(data));
 }
 
+function WatchlistButtons() {
+    let data = GetDataFromLocalStorage();
+
+    data.forEach(button => {
+        WatchlistButtonColor(button.id);
+    })
+}
+
+function WatchlistButtonColor(data){
+    let button = $(`.wishlist-btn[value="${data}"]`);
+    button.addClass("added");
+    button.html(`<i class="fa fa-heart"></i> Added to Watchlist`);
+}
+
 function PrintWatchlistMovies(data) {
     let container = $("#watchlist");
     container.empty();
-
+    if(!data.length){
+        container.html(`<div><p>No movies on Watchlist</p></div>`);
+    }
+    else{
     data.forEach(function (movie) {
         let card = `<div class="movie">
         <a href="movie.html?id=${movie.id}">
@@ -497,12 +601,13 @@ function PrintWatchlistMovies(data) {
       </div>`;
         container.append(card);
     });
+    }
 }
 
-function ShowWatchlistPopUp(data, elementId, popUpText) {
+function ShowWatchlistPopUp(movie, elementId, popUpText) {
     let container = document.getElementById(`${elementId}`);
 
-    container.innerText = `${data.title} ${popUpText}`;
+    container.innerText = `${movie.title} ${popUpText}`;
 
     container.classList.add("show");
 

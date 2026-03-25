@@ -14,5 +14,9 @@
     {
         "name": "Contact Us",
         "path": "contact.html"
+    },
+    {
+        "name": "Author",
+        "path": "author.html"
     }
 ]

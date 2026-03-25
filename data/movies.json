@@ -30,10 +30,7 @@
         ],
         "image": "img/Braveheart.jpg",
         "rating": 4,
-        "description": {
-            "short": "An epic historical war drama directed by and starring Mel Gibson as Sir William Wallace, a 13th-century Scottish warrior who leads a rebellion against the tyranny of King Edward I of England.",
-            "long": "William Wallace is a Scottish rebel who leads an uprising against the cruel English ruler Edward Longshanks, who wishes to inherit the crown of Scotland for himself. When he was a young boy, William Wallace's father and brother, along with many others, lost their lives trying to free Scotland. Once he loses another of his loved ones, William Wallace begins his long quest to make Scotland free once and for all, along with the assistance of Robert the Bruce."     
-        }
+        "description": "William Wallace is a Scottish rebel who leads an uprising against the cruel English ruler Edward Longshanks, who wishes to inherit the crown of Scotland for himself. When he was a young boy, William Wallace's father and brother, along with many others, lost their lives trying to free Scotland. Once he loses another of his loved ones, William Wallace begins his long quest to make Scotland free once and for all, along with the assistance of Robert the Bruce."
     },
     {
         "id": 2,
@@ -65,10 +62,7 @@
         ],
         "image": "img/TheSilenceoftheLambs.jpg",
         "rating": 5,
-        "description": {
-            "short": "Psychological horror-thriller following young FBI trainee Clarice Starling (Jodie Foster) as she seeks the help of imprisoned cannibalistic serial killer Dr. Hannibal Lecter (Anthony Hopkins).",
-            "long": "F.B.I. trainee Clarice Starling (Jodie Foster) works hard to advance her career, while trying to hide or put behind her West Virginia roots, of which if some knew, would automatically classify her as being backward or white trash. After graduation, she aspires to work in the agency's Behavioral Science Unit under the leadership of Jack Crawford (Scott Glenn). While she is still a trainee, Crawford asks her to question Dr. Hannibal Lecter (Sir Anthony Hopkins), a psychiatrist imprisoned, thus far, for eight years in maximum security isolation for being a serial killer who cannibalized his victims. Clarice is able to figure out the assignment is to pick Lecter's brains to help them solve another serial murder case, that of someone coined by the media as Buffalo Bill (Ted Levine), who has so far killed five victims, all located in the eastern U.S., all young women, who are slightly overweight (especially around the hips), all who were drowned in natural bodies of water, and all who were stripped of large swaths of skin. She also figures that Crawford chose her, as a woman, to be able to trigger some emotional response from Lecter. After speaking to Lecter for the first time, she realizes that everything with him will be a psychological game, with her often having to read between the very cryptic lines he provides. She has to decide how much she will play along, as his request in return for talking to him is to expose herself emotionally to him. The case takes a more dire turn when a sixth victim is discovered, this one from who they are able to retrieve a key piece of evidence, if Lecter is being forthright as to its meaning. A potential seventh victim is high profile Catherine Martin (Brooke Smith), the daughter of Senator Ruth Martin (Diane Baker), which places greater scrutiny on the case as they search for a hopefully still alive Catherine. Who may factor into what happens is Dr. Frederick Chilton (Anthony Heald), the warden at the prison, an opportunist who sees the higher profile with Catherine, meaning a higher profile for himself if he can insert himself successfully into the proceedings."     
-        }
+        "description": "F.B.I. trainee Clarice Starling (Jodie Foster) works hard to advance her career, while trying to hide or put behind her West Virginia roots, of which if some knew, would automatically classify her as being backward or white trash. After graduation, she aspires to work in the agency's Behavioral Science Unit under the leadership of Jack Crawford (Scott Glenn). While she is still a trainee, Crawford asks her to question Dr. Hannibal Lecter (Sir Anthony Hopkins), a psychiatrist imprisoned, thus far, for eight years in maximum security isolation for being a serial killer who cannibalized his victims. Clarice is able to figure out the assignment is to pick Lecter's brains to help them solve another serial murder case, that of someone coined by the media as Buffalo Bill (Ted Levine), who has so far killed five victims, all located in the eastern U.S., all young women, who are slightly overweight (especially around the hips), all who were drowned in natural bodies of water, and all who were stripped of large swaths of skin. She also figures that Crawford chose her, as a woman, to be able to trigger some emotional response from Lecter. After speaking to Lecter for the first time, she realizes that everything with him will be a psychological game, with her often having to read between the very cryptic lines he provides. She has to decide how much she will play along, as his request in return for talking to him is to expose herself emotionally to him. The case takes a more dire turn when a sixth victim is discovered, this one from who they are able to retrieve a key piece of evidence, if Lecter is being forthright as to its meaning. A potential seventh victim is high profile Catherine Martin (Brooke Smith), the daughter of Senator Ruth Martin (Diane Baker), which places greater scrutiny on the case as they search for a hopefully still alive Catherine. Who may factor into what happens is Dr. Frederick Chilton (Anthony Heald), the warden at the prison, an opportunist who sees the higher profile with Catherine, meaning a higher profile for himself if he can insert himself successfully into the proceedings."
     },
     {
         "id": 3,
@@ -101,10 +95,7 @@
         ],
         "image": "img/DjangoUnchained.jpg",
         "rating": 4,
-        "description": {
-            "short": "2012 revisionist Western directed by Quentin Tarantino that follows Django (Jamie Foxx), a freed slave who partners with a German bounty hunter (Christoph Waltz) to rescue his wife from a brutal Mississippi plantation owner (Leonardo DiCaprio).",
-            "long": "In 1858, a bounty hunter named King Schultz seeks out a slave named Django and buys him because he needs him to find some men he is looking for. After finding them, Django wants to find his wife, Broomhilda, who, along with him, was sold separately by his former owner for trying to escape. Schultz offers to help him if he chooses to stay with him and be his partner. Eventually they learn that she was sold to a plantation in Mississippi. Knowing they can't just go in and say they want her, they come up with a plan so that the owner will welcome them into his home and they can find a way."
-        }
+        "description": "In 1858, a bounty hunter named King Schultz seeks out a slave named Django and buys him because he needs him to find some men he is looking for. After finding them, Django wants to find his wife, Broomhilda, who, along with him, was sold separately by his former owner for trying to escape. Schultz offers to help him if he chooses to stay with him and be his partner. Eventually they learn that she was sold to a plantation in Mississippi. Knowing they can't just go in and say they want her, they come up with a plan so that the owner will welcome them into his home and they can find a way."
     },
     {
         "id": 4,
@@ -132,10 +123,7 @@
         ],
         "image": "img/TheShawshankRedemption.jpg",
         "rating": 5,
-        "description": {
-            "short": "It follows Andy Dufresne (Tim Robbins), a banker wrongfully convicted of murdering his wife and her lover, who maintains his innocence while serving a life sentence at the brutal Shawshank State Penitentiary.",
-            "long": "Chronicles the experiences of a formerly successful banker as a prisoner in the gloomy jailhouse of Shawshank after being found guilty of a crime he did not commit. The film portrays the man's unique way of dealing with his new, torturous life; along the way he befriends a number of fellow prisoners, most notably a wise long-term inmate named Red."
-        }
+        "description": "Chronicles the experiences of a formerly successful banker as a prisoner in the gloomy jailhouse of Shawshank after being found guilty of a crime he did not commit. The film portrays the man's unique way of dealing with his new, torturous life; along the way he befriends a number of fellow prisoners, most notably a wise long-term inmate named Red."
     },
     {
         "id": 5,
@@ -167,10 +155,7 @@
         ],
         "image": "img/FightClub.jpg",
         "rating": 4,
-        "description": {
-            "short": "A cult classic dark satire about an alienated, insomniac office worker who teams up with a charismatic soap salesman, Tyler Durden, to create an underground, bare-knuckle fighting ring as a form of extreme therapy.",
-            "long": "A nameless first-person narrator attends support groups in an attempt to subdue his emotional state and relieve his insomniac state. When he meets Marla, another fake attendee of support groups, his life seems to become a little more bearable. However, when he associates himself with Tyler he is dragged into an underground fight club and soap-making scheme. Together the two men spiral out of control and engage in competitive rivalry for love and power."
-        }
+        "description": "A nameless first-person narrator attends support groups in an attempt to subdue his emotional state and relieve his insomniac state. When he meets Marla, another fake attendee of support groups, his life seems to become a little more bearable. However, when he associates himself with Tyler he is dragged into an underground fight club and soap-making scheme. Together the two men spiral out of control and engage in competitive rivalry for love and power."
     },
     {
         "id": 6,
@@ -200,12 +185,9 @@
                 "name": "Fantasy"
             }
         ],
-        "image": "img/TheLordOftheRings.jpg",
+        "image": "img/TheLordoftheRings.jpg",
         "rating": 5,
-        "description": {
-            "short": "An epic fantasy, following Hobbit Frodo Baggins on a perilous quest across Middle-earth to destroy the One Ring—a source of absolute evil—in the fires of Mount Doom.",
-            "long": "An ancient Ring thought lost for centuries has been found, and through a strange twist of fate has been given to a small Hobbit named Frodo. When Gandalf discovers the Ring is in fact the One Ring of the Dark Lord Sauron, Frodo must make an epic quest to Mount Doom in order to destroy it. However, he does not go alone. He is joined by Gandalf, Legolas the elf, Gimli the Dwarf, Aragorn, Boromir, and his three Hobbit friends Merry, Pippin, and Samwise. Through mountains, snow, darkness, forests, rivers and plains, facing evil and danger at every corner the Fellowship of the Ring must go. Their quest to destroy the One Ring is the only hope for the end of the Dark Lords reign."
-        }
+        "description": "An ancient Ring thought lost for centuries has been found, and through a strange twist of fate has been given to a small Hobbit named Frodo. When Gandalf discovers the Ring is in fact the One Ring of the Dark Lord Sauron, Frodo must make an epic quest to Mount Doom in order to destroy it. However, he does not go alone. He is joined by Gandalf, Legolas the elf, Gimli the Dwarf, Aragorn, Boromir, and his three Hobbit friends Merry, Pippin, and Samwise. Through mountains, snow, darkness, forests, rivers and plains, facing evil and danger at every corner the Fellowship of the Ring must go. Their quest to destroy the One Ring is the only hope for the end of the Dark Lords reign."
     },
     {
         "id": 7,
@@ -237,10 +219,7 @@
         ],
         "image": "img/Gladiator.jpg",
         "rating": 4,
-        "description": {
-            "short": "Ridley Scott-directed epic starring Russell Crowe as Maximus Decimus Meridius, a beloved Roman general betrayed when the emperor's corrupt son, Commodus (Joaquin Phoenix), murders his father, seizes the throne, and orders Maximus's family killed.",
-            "long": "Maximus is a powerful Roman general, loved by the people and the aging Emperor, Marcus Aurelius. Before his death, the Emperor chooses Maximus to be his heir over his own son, Commodus, and a power struggle leaves Maximus and his family condemned to death. The powerful general is captured and put into the Gladiator games until he dies. The only desire that fuels him now is the chance to rise to the top so that he will be able to look into the eyes of the man who will feel his revenge."
-        }
+        "description": "Maximus is a powerful Roman general, loved by the people and the aging Emperor, Marcus Aurelius. Before his death, the Emperor chooses Maximus to be his heir over his own son, Commodus, and a power struggle leaves Maximus and his family condemned to death. The powerful general is captured and put into the Gladiator games until he dies. The only desire that fuels him now is the chance to rise to the top so that he will be able to look into the eyes of the man who will feel his revenge."
     },
     {
         "id": 8,
@@ -272,10 +251,7 @@
         ],
         "image": "img/TheLionKing.jpg",
         "rating": 4,
-        "description": {
-            "short": "Disney animated classic following Simba, a young lion cub destined to rule the Pride Lands.",
-            "long": "A young lion prince is cast out of his pride by his cruel uncle, who claims he killed his father. While the uncle rules with an iron paw, the prince grows up beyond the Savannah, living by a philosophy: No worries for the rest of your days. But when his past comes to haunt him, the young prince must decide his fate: Will he remain an outcast or face his demons and become what he needs to be?"
-        }
+        "description": "A young lion prince is cast out of his pride by his cruel uncle, who claims he killed his father. While the uncle rules with an iron paw, the prince grows up beyond the Savannah, living by a philosophy: No worries for the rest of your days. But when his past comes to haunt him, the young prince must decide his fate: Will he remain an outcast or face his demons and become what he needs to be?"
     },
     {
         "id": 9,
@@ -307,10 +283,7 @@
         ],
         "image": "img/Goodfellas.jpg",
         "rating": 4,
-        "description": {
-            "short": "Critically acclaimed, fast-paced crime drama directed by Martin Scorsese that tracks the rise and fall of mob associate Henry Hill and his friends over three decades.",
-            "long": "Henry Hill recounts his life in the mob, from his teenage years to his eventual downfall. Immersed in organized crime, he experiences wealth, power, and violence alongside friends Jimmy Conway and Tommy DeVito. The film blends crime, drama, and dark humor, exploring loyalty, ambition, betrayal, and the consequences of criminal life. Themes of family, morality, and the fleeting nature of power underpin the story."
-        }
+        "description": "Henry Hill recounts his life in the mob, from his teenage years to his eventual downfall. Immersed in organized crime, he experiences wealth, power, and violence alongside friends Jimmy Conway and Tommy DeVito. The film blends crime, drama, and dark humor, exploring loyalty, ambition, betrayal, and the consequences of criminal life. Themes of family, morality, and the fleeting nature of power underpin the story."
     },
     {
         "id": 10,
@@ -342,10 +315,7 @@
         ],
         "image": "img/TheGodfather.jpg",
         "rating": 5,
-        "description": {
-            "short": "Cinematic masterpiece directed by Francis Ford Coppola, chronicling the Corleone crime family in 1940s New York.",
-            "long": "The Godfather Don Vito Corleone is the head of the Corleone mafia family in New York. He is at the event of his daughter's wedding. Michael, Vito's youngest son and a decorated WWII Marine is also present at the wedding. Michael seems to be uninterested in being a part of the family business. Vito is a powerful man, and is kind to all those who give him respect but is ruthless against those who do not. But when a powerful and treacherous rival wants to sell drugs and needs the Don's influence for the same, Vito refuses to do it. What follows is a clash between Vito's fading old values and the new ways which may cause Michael to do the thing he was most reluctant in doing and wage a mob war against all the other mafia families which could tear the Corleone family apart."
-        }
+        "description": "The Godfather Don Vito Corleone is the head of the Corleone mafia family in New York. He is at the event of his daughter's wedding. Michael, Vito's youngest son and a decorated WWII Marine is also present at the wedding. Michael seems to be uninterested in being a part of the family business. Vito is a powerful man, and is kind to all those who give him respect but is ruthless against those who do not. But when a powerful and treacherous rival wants to sell drugs and needs the Don's influence for the same, Vito refuses to do it. What follows is a clash between Vito's fading old values and the new ways which may cause Michael to do the thing he was most reluctant in doing and wage a mob war against all the other mafia families which could tear the Corleone family apart."
     },
     {
         "id": 11,
@@ -377,10 +347,7 @@
         ],
         "image": "img/InglouriousBasterds.jpg",
         "rating": 3,
-        "description": {
-            "short": "Quentin Tarantino-directed war film set in Nazi-occupied France, following two parallel plots to assassinate Nazi leaders.",
-            "long": "In German-occupied France, young Jewish refugee Shosanna Dreyfus witnesses the slaughter of her family by Colonel Hans Landa. Narrowly escaping with her life, she plots her revenge several years later when German war hero Fredrick Zoller takes a rapid interest in her and arranges an illustrious movie premiere at the theater she now runs. With the promise of every major Nazi officer in attendance, the event catches the attention of the 'Basterds', a group of Jewish-American guerrilla soldiers led by the ruthless Lt. Aldo Raine. As the relentless executioners advance and the conspiring young girl's plans are set in motion, their paths will cross for a fateful evening that will shake the very annals of history."
-        }
+        "description": "In German-occupied France, young Jewish refugee Shosanna Dreyfus witnesses the slaughter of her family by Colonel Hans Landa. Narrowly escaping with her life, she plots her revenge several years later when German war hero Fredrick Zoller takes a rapid interest in her and arranges an illustrious movie premiere at the theater she now runs. With the promise of every major Nazi officer in attendance, the event catches the attention of the 'Basterds', a group of Jewish-American guerrilla soldiers led by the ruthless Lt. Aldo Raine. As the relentless executioners advance and the conspiring young girl's plans are set in motion, their paths will cross for a fateful evening that will shake the very annals of history."
     },
     {
         "id": 12,
@@ -412,10 +379,7 @@
         ],
         "image": "img/TheDarkKnight.jpg",
         "rating": 5,
-        "description": {
-            "short": "Gritty superhero crime-thriller where Batman (Christian Bale), Lieutenant Gordon, and DA Harvey Dent battle the Joker (Heath Ledger), a sadistic criminal mastermind plunging Gotham into anarchy.",
-            "long": "Set within a year after the events of Batman Begins (2005), Batman, Lieutenant James Gordon, and new District Attorney Harvey Dent successfully begin to round up the criminals that plague Gotham City, until a mysterious and sadistic criminal mastermind known only as The Joker appears in Gotham, creating a new wave of chaos. Batman's struggle against The Joker becomes deeply personal, forcing him to confront everything he believes and improve his technology to stop him. A love triangle develops between Bruce Wayne, Dent, and Rachel Dawes."
-        }
+        "description": "Set within a year after the events of Batman Begins (2005), Batman, Lieutenant James Gordon, and new District Attorney Harvey Dent successfully begin to round up the criminals that plague Gotham City, until a mysterious and sadistic criminal mastermind known only as The Joker appears in Gotham, creating a new wave of chaos. Batman's struggle against The Joker becomes deeply personal, forcing him to confront everything he believes and improve his technology to stop him. A love triangle develops between Bruce Wayne, Dent, and Rachel Dawes."
     },
     {
         "id": 13,
@@ -447,10 +411,70 @@
         ],
         "image": "img/Interstellar.jpg",
         "rating": 4,
-        "description": {
-            "short": "Sci-fi epic directed by Christopher Nolan where a farmer and ex-NASA pilot (Matthew McConaughey) leads a space mission through a wormhole to find a new, habitable planet for humanity as Earth faces ecological collapse.",
-            "long": "In the near future around the American Midwest, Cooper, an ex-science engineer and pilot, is tied to his farming land with his daughter Murph and son Tom. As devastating sandstorms ravage Earth's crops, the people of Earth realize their life here is coming to an end as food begins to run out. Eventually stumbling upon a N.A.S.A. base 6 hours from Cooper's home, he is asked to go on a daring mission with a few other scientists into a wormhole because of Cooper's scientific intellect and ability to pilot aircraft unlike the other crew members. In order to find a new home while Earth decays, Cooper must decide to either stay, or risk never seeing his children again in order to save the human race by finding another habitable planet."
-        }
+        "description": "In the near future around the American Midwest, Cooper, an ex-science engineer and pilot, is tied to his farming land with his daughter Murph and son Tom. As devastating sandstorms ravage Earth's crops, the people of Earth realize their life here is coming to an end as food begins to run out. Eventually stumbling upon a N.A.S.A. base 6 hours from Cooper's home, he is asked to go on a daring mission with a few other scientists into a wormhole because of Cooper's scientific intellect and ability to pilot aircraft unlike the other crew members. In order to find a new home while Earth decays, Cooper must decide to either stay, or risk never seeing his children again in order to save the human race by finding another habitable planet."
+    },
+    {
+        "id": 14,
+        "title": "The Bourne Ultimatum",
+        "duration": 115,
+        "premiere": "2007-07-25",
+        "crew": {
+            "director": "Paul Greengrass",
+            "writer": "Tony Gilroy",
+            "actors": [
+                "Matt Damon",
+                "Edgar Ramírez",
+                "Joan Allen"
+            ]
+        },
+        "category": [
+            {
+                "id": 8,
+                "name": "Drama"
+            },
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 18,
+                "name": "Thriller"
+            }
+        ],
+        "image": "img/TheBourneUltimatum.jpg",
+        "rating": 4,
+        "description": "Bourne is once again brought out of hiding, this time inadvertently by London-based reporter Simon Ross who is trying to unveil Operation Blackbriar--an upgrade to Project Treadstone--in a series of newspaper columns. Bourne sets up a meeting with Ross and realizes instantly they're being scanned. Information from the reporter stirs a new set of memories, and Bourne must finally, ultimately, uncover his dark past whilst dodging The Company's best efforts in trying to eradicate him."
+    },
+    {
+        "id": 15,
+        "title": "Pulp Fiction",
+        "duration": 154,
+        "premiere": "1994-10-14",
+        "crew": {
+            "director": "Quentin Tarantino",
+            "writer": "Quentin Tarantino",
+            "actors": [
+                "John Travolta",
+                "Uma Thurman",
+                "Samuel L. Jackson"
+            ]
+        },
+        "category": [
+            {
+                "id": 2,
+                "name": "Adventure"
+            },
+            {
+                "id": 6,
+                "name": "Crime"
+            },
+            {
+                "id": 15,
+                "name": "Romance"
+            }
+        ],
+        "image": "img/PulpFiction.jpg",
+        "rating": 5,
+        "description": "Jules Winnfield (Samuel L. Jackson) and Vincent Vega (John Travolta) are two hitmen who are out to retrieve a suitcase stolen from their employer, mob boss Marsellus Wallace (Ving Rhames). Wallace has also asked Vincent to take his wife Mia (Uma Thurman) out a few days later when Wallace himself will be out of town. Butch Coolidge (Bruce Willis) is an aging boxer who is paid by Wallace to lose his fight. The lives of these seemingly unrelated people are woven together comprising of a series of funny, bizarre and uncalled-for incidents."
     }
-
 ]
