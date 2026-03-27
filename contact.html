@@ -1,77 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-		
-		<title>Filmotip | Contact</title>
 
-		<link rel="icon" type="image/png" href="img/logo.png" />
-		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
-		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1" />
 
-		
-		<link rel="stylesheet" href="assets/css/style.css">
-		
-		
-	</head>
+	<title>Filmotip | Contact</title>
 
+	<meta name="description"
+		content="Discover movie reviews, ratings, and recommendations on Filmotip. Find your next favorite movie." />
+	<meta name="keywords" content="movies, reviews, film ratings, movie recommendations, filmotip" />
+	<meta name="author" content="Filmotip" />
 
-	<body>
-		
+	<link rel="icon" type="image/png" href="img/logo.png" />
 
-		<div id="site-content">
-			<header class="site-header">
-			</header>
-			<main class="main-content">
-				<div class="container">
-					<div class="page">
-						<div class="breadcrumbs">
-							<a href="index.html">Home</a>
-							<span>Contact</span>
-						</div>
+	<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css" />
+	<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
-						<div class="content">
-							<div class="row">
-								<div class="col-md-6">
-									<h2>Contact</h2>
-									<ul class="contact-detail">
-										<li>
-											<p><span>Filmotip</span> <br>Zdravka Celara, ICT</p>
-										</li>
-										<li>
-											<a href="#">+1 (123) 456-7890</a>
-										</li>
-										<li>
-											<a href="#">mateja.nedeljkovic.106@ict.edu.rs</a>
-										</li>
-									</ul>
-									
-								</div>
-								<div class="col-md-5">
-									<div class="contact-form">
-										<input type="text" class="name" placeholder="name...">
-										<input type="text" class="email" placeholder="email...">
-										<input type="text" class="website" placeholder="website...">
-										<textarea class="message" placeholder="message..."></textarea>
-										<input type="submit" value="Send Message ">
+	<link rel="stylesheet" href="assets/css/style.css" />
+</head>
 
+<body>
+	<div id="site-content">
+		<header class="site-header"></header>
+		<main class="main-content">
+			<div class="container">
+				<div class="page">
+					<div class="breadcrumbs">
+						<a href="index.html">Home</a>
+						<span>Contact</span>
+					</div>
+
+					<div class="content">
+						<div class="row">
+							<h2>Contact</h2>
+							<div class="col-md-4">
+								<form class="contact-form" id="contactForm" method="POST">
+									<input type="text" name="name" class="name"
+										placeholder="Enter your name and surname" />
+									<input type="email" name="email" class="email" placeholder="Enter your email" />
+									<label>Gender:</label>
+									<label><input type="radio" name="gender" value="male" />
+										Male</label>
+									<label><input type="radio" name="gender" value="female" />
+										Female</label>
+									<textarea name="message" class="message" placeholder=""></textarea>
+									<div class="checkbox-group">
+										<label>
+											<input type="checkbox" name="agreement" />
+											I agree that my personal information may be stored for
+											up to one year
+										</label>
 									</div>
-								</div>
+									<input type="submit" value="Send Message" />
+								</form>
 							</div>
 						</div>
 					</div>
-				</div> 
-			</main>
-			<footer class="site-footer">
-			</footer>
-		</div>
-		
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<script src="js/plugins.js"></script>
-		<script src="js/app.js"></script>
-		<script src="assets/js/main.js"></script>
-	</body>
+				</div>
+			</div>
+		</main>
+		<footer class="site-footer"></footer>
+	</div>
+	<div id="form-popup" class="wishlist-popup"></div>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/app.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
 
 </html>

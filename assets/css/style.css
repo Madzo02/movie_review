@@ -479,58 +479,90 @@ ul.arrow {
       left: 0;
       top: 5px; }
 
+/* CONTACT FORM */
 .contact-form {
   margin-bottom: 30px;
-  *zoom: 1; }
-  .contact-form:after {
-    content: " ";
-    clear: both;
-    display: block;
-    overflow: hidden;
-    height: 0; }
-  .contact-form input:not([type="submit"]), .contact-form textarea {
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    padding: 10px 10px 10px 40px;
-    display: block;
-    width: 100%;
-    border-radius: 3px;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
-    background-repeat: no-repeat;
-    background-position: 10px 15px;
-    -webkit-transition: .3s ease;
-            transition: .3s ease;
-    outline: none; }
-    .contact-form input:not([type="submit"]):focus, .contact-form input:not([type="submit"]):hover, .contact-form textarea:focus, .contact-form textarea:hover {
-      border-color: #ffaa3c; }
-  .contact-form textarea {
-    min-height: 100px; }
-  .contact-form .name {
-    background-image: url("images/icon-contact-user.png"); }
-    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
-      .contact-form .name {
-        background-image: url("images/icon-contact-user@2x.png");
-        background-size: 12px 14px; } }
-  .contact-form .email {
-    background-image: url("images/icon-contact-envelope.png"); }
-    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
-      .contact-form .email {
-        background-image: url("images/icon-contact-envelope@2x.png");
-        background-size: 14px 11px; } }
-  .contact-form .website {
-    background-image: url("images/icon-contact-globe.png"); }
-    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
-      .contact-form .website {
-        background-image: url("images/icon-contact-globe@2x.png");
-        background-size: 14px 14px; } }
-  .contact-form .message {
-    background-image: url("images/icon-contact-pencil.png"); }
-    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
-      .contact-form .message {
-        background-image: url("images/icon-contact-pencil@2x.png");
-        background-size: 14px 14px; } }
-  .contact-form input[type="submit"] {
-    float: right; }
+}
+
+/* Clearfix */
+.contact-form::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* TEXT INPUTS + TEXTAREA (excluding radio, checkbox, submit) */
+.contact-form input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
+.contact-form textarea {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+  outline: none;
+}
+
+/* HOVER + FOCUS */
+.contact-form input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]):focus,
+.contact-form input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]):hover,
+.contact-form textarea:focus,
+.contact-form textarea:hover {
+  border-color: #ffaa3c;
+}
+
+/* TEXTAREA */
+.contact-form textarea {
+  min-height: 100px;
+}
+
+/* RADIO + CHECKBOX FIX */
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+  display: inline;
+  width: auto;
+  margin-right: 5px;
+}
+
+/* INLINE GROUP (for gender, etc.) */
+.contact-form .inline-group label {
+  margin-right: 15px;
+  display: inline-block;
+}
+
+/* SUBMIT BUTTON */
+.contact-form input[type="submit"] {
+  float: right;
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffaa3c;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #e6952f;
+}
+
+.contact-form .checkbox-group {
+  margin: 10px 0;
+}
+
+.contact-form .checkbox-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-form input.invalid {
+  border: 2px solid red;
+}
+.contact-form input.valid {
+  border: 2px solid green;
+}
 
 .container {
   margin-right: auto;
